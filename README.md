@@ -1,7 +1,7 @@
 # Diabetes Probability Calculation Program
 
 ## Project Overview
-This software is a custom-built, Graphical User Interface (GUI) desktop application designed to calculate the probability of a patient having diabetes based on 8 clinical metrics. Instead of relying on high-level machine learning libraries, the program implements the **K-Nearest Neighbors (KNN)** algorithm and **Euclidean Distance** calculations entirely from scratch. 
+This program is a custom-built, Graphical User Interface (GUI) desktop application designed to calculate the probability of a patient having diabetes based on 8 clinical metrics. Instead of relying on high-level machine learning libraries, the program implements the **K-Nearest Neighbors (KNN)** algorithm and **Euclidean Distance** calculations entirely from scratch. 
 
 Developed as part of the CME 3402 Concepts of Programming Languages course, this project also features a polyglot approach, demonstrating the core Euclidean mathematical logic across 10 different programming languages.
 
