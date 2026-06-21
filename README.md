@@ -36,4 +36,4 @@ While the main application with the GUI is written in **Python**, the core 2D Eu
 2. Ensure `diabetes.csv` is in the same directory or update the file path in the python script.
 3. Run the application:
    ```bash
-   diabets.py
+   diabetes.py
