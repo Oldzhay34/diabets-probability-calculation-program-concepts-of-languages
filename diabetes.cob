@@ -1,0 +1,40 @@
+IDENTIFICATION DIVISION.
+       PROGRAM-ID. EuclideanDistance.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 P1 PIC 9(3)V9(3) OCCURS 8 TIMES.
+       01 P2 PIC 9(3)V9(3) OCCURS 8 TIMES.
+       01 DIFF PIC S9(5)V9(6).
+       01 TOTAL PIC 9(10)V9(6) VALUE 0.
+       01 DIST PIC 9(10)V9(6).
+       01 IDX PIC 9.
+
+       PROCEDURE DIVISION.
+       MAIN-PARA.
+           MOVE 6    TO P1(1)
+           MOVE 148  TO P1(2)
+           MOVE 72   TO P1(3)
+           MOVE 35   TO P1(4)
+           MOVE 0    TO P1(5)
+           MOVE 33.6 TO P1(6)
+           MOVE 0.627 TO P1(7)
+           MOVE 50   TO P1(8)
+
+           MOVE 1    TO P2(1)
+           MOVE 85   TO P2(2)
+           MOVE 66   TO P2(3)
+           MOVE 29   TO P2(4)
+           MOVE 0    TO P2(5)
+           MOVE 26.6 TO P2(6)
+           MOVE 0.351 TO P2(7)
+           MOVE 31   TO P2(8)
+
+           PERFORM VARYING IDX FROM 1 BY 1 UNTIL IDX > 8
+               COMPUTE DIFF = P1(IDX) - P2(IDX)
+               COMPUTE TOTAL = TOTAL + DIFF * DIFF
+           END-PERFORM
+
+           COMPUTE DIST = FUNCTION SQRT(TOTAL)
+           DISPLAY "Euclidean Distance: " DIST
+           STOP RUN.
